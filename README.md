@@ -129,8 +129,12 @@ VaaniFlow/
 │   ├── evaluator.py          # Deterministic rule checker + LLM Judge
 │   ├── run_eval.py           # Evaluation harness runner & comparative benchmark
 │   └── analysis.sql          # 6 analytical SQL queries for failure post-mortems
+├── .agent/skills/            # Installed Streamlit UI Craft skill
+├── .streamlit/
+│   └── config.toml           # Telemetry dark theme configuration
+├── app.py                    # Streamlit Interactive Web Studio & Telemetry Console
 ├── .env.example              # Environment variables template
-├── requirements.txt          # Minimal Python dependencies
+├── requirements.txt          # Minimal Python dependencies (google-genai, streamlit, pandas)
 └── README.md                 # Project documentation and benchmark report
 ```
 
@@ -147,12 +151,18 @@ pip install -r requirements.txt
 Copy `.env.example` to `.env` and insert your Gemini API Key:
 ```env
 GEMINI_API_KEY=your_actual_gemini_api_key_here
-BOT_MODEL=gemini-2.5-flash
-CUSTOMER_MODEL=gemini-2.5-flash
-JUDGE_MODEL=gemini-2.5-pro
+BOT_MODEL=gemini-3.5-flash-lite
+CUSTOMER_MODEL=gemini-3.5-flash-lite
+JUDGE_MODEL=gemini-3.5-flash
 ```
 
-### Step 3: Interactive CLI Agent Test
+### Step 3: Launch the Streamlit Web Studio
+Experience the interactive cockpit with animated audio waveform, live call simulator, and SQL telemetry:
+```powershell
+streamlit run app.py
+```
+
+### Step 4: Interactive CLI Agent Test
 Speak with Neha directly in your terminal to test spoken cadence:
 ```powershell
 # Interactive live call with Neha
@@ -162,7 +172,7 @@ python src/agent.py --prompt prompts/v3.txt
 python src/agent.py --mock
 ```
 
-### Step 4: Run a Single Scenario End-to-End
+### Step 5: Run a Single Scenario End-to-End
 ```powershell
 python src/customer_sim.py
 ```
