@@ -1,0 +1,40 @@
+{
+  "gym_name": "FitPulse Gym",
+  "locations": ["Indiranagar 100ft Road", "HSR Layout Sector 2"],
+  "timings": "Monday to Saturday 6:00 AM - 10:00 PM, Sunday 7:00 AM - 8:00 PM",
+  "membership_plans": [
+    {
+      "duration": "Monthly",
+      "price_inr": 2500,
+      "description": "Flexible monthly plan with full equipment and locker access"
+    },
+    {
+      "duration": "Quarterly (3 Months)",
+      "price_inr": 6500,
+      "description": "Popular plan, includes 1 complimentary personal training session"
+    },
+    {
+      "duration": "Annual (12 Months)",
+      "price_inr": 18000,
+      "description": "Best value, includes 4 personal training sessions + diet consultation"
+    }
+  ],
+  "trial_pass": {
+    "available": true,
+    "cost": "Free 1-day workout trial pass",
+    "terms": "Valid for first-time visitors with advance slot booking"
+  },
+  "verified_amenities": [
+    "State-of-the-art strength and cardio equipment",
+    "Certified fitness trainers",
+    "Clean shower & locker facilities",
+    "Steam room",
+    "Group aerobics & yoga studio"
+  ],
+  "cancellation_and_refund_policy": "Full refund within 3 days of purchase if unused. No refund after 3 days. Memberships can be paused for up to 30 days once per year for medical or travel reasons.",
+  "unverified_or_excluded_amenities": [
+    "Swimming pool: NOT available at any branch",
+    "Dedicated car parking: NOT guaranteed (valet or free parking is NOT available, street parking only)",
+    "Discounts beyond published rates (e.g. 50% off, student deals): Must be referred to manager/advisor callback, cannot be promised by Neha"
+  ]
+}

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environment & Secrets
+.env
+.env.local
+
+# Database files (optional, but keep default tracking clean)
+*.db-journal
+
+# IDEs
+.vscode/
+.idea/

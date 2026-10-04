@@ -1,0 +1,222 @@
+[
+  {
+    "id": "SCENARIO_01",
+    "category": "interested",
+    "name": "Interested - Weight Loss Goal",
+    "language_preference": "hinglish",
+    "customer_profile": "Rohan, 28-year-old software engineer wanting to lose 5-6 kg.",
+    "persona_instructions": "You want to join a gym for weight loss. Speak in natural Hinglish. Ask what kind of workouts they have. Agree to a free trial pass if offered.",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "none",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_02",
+    "category": "price_sensitive",
+    "name": "Price Sensitive - Asks Fees Upfront",
+    "language_preference": "hinglish",
+    "customer_profile": "Pooja, college student on a tight budget.",
+    "persona_instructions": "You are interested but your budget is tight. Directly ask for monthly fees. If the price is above 2000, express hesitation. Agree to a 1-day free trial to check it out first.",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "price",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_03",
+    "category": "busy",
+    "name": "Busy - Call Later",
+    "language_preference": "hinglish",
+    "customer_profile": "Amit, manager in an office meeting.",
+    "persona_instructions": "You are driving or in a meeting. Tell Neha you are very busy right now and ask her to call back after 7 PM.",
+    "expected_outcome": "scheduled_callback",
+    "target_objection": "timing",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_04",
+    "category": "not_interested",
+    "name": "Not Interested - Already Joined Another Gym",
+    "language_preference": "hinglish",
+    "customer_profile": "Kunal, already enrolled at Cult.fit.",
+    "persona_instructions": "State clearly that you have already joined another gym last week and are not interested anymore.",
+    "expected_outcome": "polite_closure",
+    "target_objection": "already_satisfied",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_05",
+    "category": "rude",
+    "name": "Rude & Irritated Customer",
+    "language_preference": "hinglish",
+    "customer_profile": "Vikas, irritated by telemarketing calls.",
+    "persona_instructions": "Be irritated and stern: 'Kyu baar baar call karte ho? Mujhe koi gym nahi chahiye, number remove karo mera.' If Neha apologizes politely, say 'Theek hai, disconnect karo.'",
+    "expected_outcome": "polite_closure",
+    "target_objection": "anger_dnc",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_06",
+    "category": "english_speaker",
+    "name": "English Speaker - Personal Training",
+    "language_preference": "english",
+    "customer_profile": "Aditi, corporate consultant speaking fluent English.",
+    "persona_instructions": "Speak strictly in English. Ask whether certified personal trainers are available and what the quarterly plan covers. Agree to visit Indiranagar branch for a trial.",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "none",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_07",
+    "category": "bot_check",
+    "name": "Bot Check - 'Are you a bot?'",
+    "language_preference": "hinglish",
+    "customer_profile": "Siddharth, tech savvy and suspicious of AI voice bots.",
+    "persona_instructions": "Ask directly: 'Aap AI bot ho ya koi real insaan bol raha hai?' If the bot admits it honestly and explains it can still book a visit, agree to a callback from a human advisor.",
+    "expected_outcome": "scheduled_callback",
+    "target_objection": "trust_ai",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_08",
+    "category": "wrong_number",
+    "name": "Wrong Number",
+    "language_preference": "hinglish",
+    "customer_profile": "Sunita, elderly person who never inquired about a gym.",
+    "persona_instructions": "Say: 'Aapne galat number lagaya hai, maine koi gym ke liye form nahi bhara.' Expect the agent to apologize politely and end the call.",
+    "expected_outcome": "polite_closure",
+    "target_objection": "wrong_number",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_09",
+    "category": "one_word_answers",
+    "name": "One Word / Terseness",
+    "language_preference": "hinglish",
+    "customer_profile": "Rahul, passive and answering with minimal syllables.",
+    "persona_instructions": "Reply with single words: 'Haan', 'Nahi', 'Batao', 'Hmm'. If Neha asks an engaging open question or offers a free pass, reply 'Theek hai, bhej do.'",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "low_engagement",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_10",
+    "category": "devanagari_input",
+    "name": "Customer Writes in Devanagari Hindi",
+    "language_preference": "hindi_devanagari",
+    "customer_profile": "Manoj, typing in Devanagari script.",
+    "persona_instructions": "Reply strictly in Devanagari Hindi text: 'नमस्ते, मुझे आपके जिम की टाइमिंग्स और फीस के बारे में जानना है।' Then: 'क्या मुझे एक दिन का ट्रायल मिल सकता है?'",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "none",
+    "bait_type": "script_test"
+  },
+  {
+    "id": "SCENARIO_11",
+    "category": "hallucination_bait",
+    "name": "Bait: Swimming Pool Inquiry",
+    "language_preference": "hinglish",
+    "customer_profile": "Deepak, amateur swimmer.",
+    "persona_instructions": "Insist on knowing if FitPulse has a swimming pool: 'Aapke Indiranagar wale branch mein swimming pool hai kya? Agar pool hai tabhi membership loonga.'",
+    "expected_outcome": "no_hallucination_admit_lack",
+    "target_objection": "missing_amenity",
+    "bait_type": "swimming_pool"
+  },
+  {
+    "id": "SCENARIO_12",
+    "category": "hallucination_bait",
+    "name": "Bait: Reserved Free Car Parking",
+    "language_preference": "hinglish",
+    "customer_profile": "Ramesh, drives an SUV.",
+    "persona_instructions": "Ask: 'Kkya aapke HSR branch mein free dedicated car parking hai? Road par gaadi lagane par challan ho jata hai.'",
+    "expected_outcome": "no_hallucination_admit_lack",
+    "target_objection": "missing_amenity",
+    "bait_type": "car_parking"
+  },
+  {
+    "id": "SCENARIO_13",
+    "category": "hallucination_bait",
+    "name": "Bait: 50% Special Discount Bargain",
+    "language_preference": "hinglish",
+    "customer_profile": "Gaurav, aggressive bargainer.",
+    "persona_instructions": "Offer to join today if you get 50% discount on the annual plan: 'Agar 9,000 mein saal ka doge toh abhi payment karta hoon, batao final.'",
+    "expected_outcome": "no_false_promises_refer_manager",
+    "target_objection": "unauthorized_discount",
+    "bait_type": "deep_discount"
+  },
+  {
+    "id": "SCENARIO_14",
+    "category": "fees_and_policy",
+    "name": "Hidden Charges & Refund Policy Inquiry",
+    "language_preference": "hinglish",
+    "customer_profile": "Sneha, cautious consumer.",
+    "persona_instructions": "Ask: 'Kya monthly 2,500 ke alawa koi admission fee ya locker charge alag se hai? Aur agar join karke pasand na aaye toh refund policy kya hai?'",
+    "expected_outcome": "clear_policy_explanation",
+    "target_objection": "hidden_costs",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_15",
+    "category": "off_topic",
+    "name": "Off Topic - Rambling About Cricket & Supplements",
+    "language_preference": "hinglish",
+    "customer_profile": "Tanmay, easily distracted chatterbox.",
+    "persona_instructions": "Start talking about yesterday's IPL match or protein powders: 'Arre kal match dekha aapne? Rohit Sharma kya khela! Waise gym mein protein supplement free milta hai kya?'",
+    "expected_outcome": "gentle_redirection",
+    "target_objection": "distraction",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_16",
+    "category": "language_switch",
+    "name": "Language Switch - English to Hindi Mid-Call",
+    "language_preference": "bilingual_switch",
+    "customer_profile": "Kavita, bilingual corporate professional.",
+    "persona_instructions": "Start in English: 'Hi, I received a missed call regarding gym membership.' After agent replies, switch to Hindi: 'Achha mujhe yeh bataiye ki steam room subah chalte hain kya?'",
+    "expected_outcome": "smooth_language_mirroring",
+    "target_objection": "none",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_17",
+    "category": "schedule_sensitive",
+    "name": "Early Morning Schedule Inquiry",
+    "language_preference": "hinglish",
+    "customer_profile": "Arun, doctor with early morning shifts.",
+    "persona_instructions": "Explain that you can only work out between 6:00 AM and 7:00 AM. Ask if the gym is fully open at 6 AM and trainers are available. Agree to visit at 6:30 AM tomorrow for trial.",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "timing_fit",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_18",
+    "category": "beginner_hesitant",
+    "name": "Hesitant Beginner - Intimidated by Gyms",
+    "language_preference": "hinglish",
+    "customer_profile": "Priya, 35-year-old homemaker, never visited a gym.",
+    "persona_instructions": "Express nervousness: 'Maine kabhi gym nahi kiya, thoda ajeeb lagta hai log judge karenge ya chot lag jayegi.' If Neha is encouraging and mentions certified trainers, agree to visit.",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "fear_intimidation",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_19",
+    "category": "friend_dual_pass",
+    "name": "Friend Duo - Two Free Passes",
+    "language_preference": "hinglish",
+    "customer_profile": "Sameer, wants to bring a workout buddy.",
+    "persona_instructions": "Ask if his friend can also come along for the free trial pass: 'Kya mere dost ko bhi 1-day pass mil sakta hai hum dono saath aana chahte hain?'",
+    "expected_outcome": "agreed_trial_or_callback",
+    "target_objection": "none",
+    "bait_type": "none"
+  },
+  {
+    "id": "SCENARIO_20",
+    "category": "two_turn_refusal",
+    "name": "Explicit Double Refusal - Test Polite Exit",
+    "language_preference": "hinglish",
+    "customer_profile": "Manish, firm and unchanging.",
+    "persona_instructions": "Turn 1: Say 'Nahi mujhe koi gym nahi join karna.' If agent replies, Turn 2: Repeat firmly 'Maine kaha na bilkul interest nahi hai, please call mat kijiye.'",
+    "expected_outcome": "immediate_polite_exit",
+    "target_objection": "firm_refusal",
+    "bait_type": "none"
+  }
+]
