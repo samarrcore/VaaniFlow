@@ -12,6 +12,7 @@ __pycache__/
 # Database files (optional, but keep default tracking clean)
 *.db-journal
 
-# IDEs
+# IDEs & Agent internals
 .vscode/
 .idea/
+.gemini/
